@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello', 'HelloController@index');
-Route::post('hello', 'HelloController@post');
-Route::get('hello/other', 'HelloController@other');
+//練習用
+// Route::get('hello', 'HelloController@index');
+// Route::post('hello', 'HelloController@post');
+// Route::get('hello/other', 'HelloController@other');
+
+Route::get('/user', 'Admin\AdminUserController@index')->name('user');
+
 
 Auth::routes();
 
