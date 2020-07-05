@@ -22,7 +22,9 @@ Route::get('/', function () {
 // Route::post('hello', 'HelloController@post');
 // Route::get('hello/other', 'HelloController@other');
 
-Route::get('/user', 'Admin\AdminUserController@index')->name('user');
+Route::get('/user', 'Admin\AdminUserController@index')->name('user.list');
+Route::get('/product', 'Ec\ProductController@index')->name('product.list');
+Route::get('/product/search', 'Ec\ProductController@productSearch')->name('product.search');
 
 
 Auth::routes();
