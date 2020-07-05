@@ -14,7 +14,6 @@ class UserService {
 
     public function findAll() {
         $users = $this->userRepository->findAll();
-        \Log::debug('userServce');
         return $users;
     }
 }
