@@ -6,7 +6,7 @@
     <title>商品一覧</title>
 </head>
 <body>
-    <div class="col-sm-4" style="padding:20px 0; padding-left:0px;">
+    <div>
         <form class="form-inline" action="{{ route('product.search')}}">
             <div class="form-group">
                 <input type="text" name="keyword" value="{{ isset($keyword) ? $keyword : ''}}"  class="form-control" placeholder="商品名を入力してください。">
@@ -33,7 +33,9 @@
                 <td>{{ $product->price }}</td>
                 <td>{{ $product->description }}</td>
             </tr>
-        @endforeach
+            @endforeach
+        @else
+            <p>商品情報がございません</p>
         @endif
     </table>
 </body>
