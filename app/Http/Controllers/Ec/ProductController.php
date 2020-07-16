@@ -16,21 +16,18 @@ class ProductController extends Controller
 
     public function index(Request $request) {
 
-        $products = $this->productService->findAll();
-        // \Log::debug(Hash::make("12345678"));
+        // $products = $this->productService->findAll();
+        $products =null;
 
         return view('ec.product_list', ['products' => $products]);
 
     }
 
     public function productSearch( Request $request ) {
-        
-        //$keywordのバリデーションが必要？その場合は、index routeにredirect?
+
         $keyword = $request->keyword;
-        // dd($keyword);
 
         $products = $this->productService->findByName($keyword);
-        // \Log::debug(Hash::make("12345678"));
 
         return view('ec.product_list', ['products' => $products])->with('keyword', $keyword);
 
