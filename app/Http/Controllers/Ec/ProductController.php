@@ -16,8 +16,7 @@ class ProductController extends Controller
 
     public function index(Request $request) {
 
-        // $products = $this->productService->findAll();
-        $products =null;
+        $products = $this->productService->findAll();
 
         return view('ec.product_list', ['products' => $products]);
 
