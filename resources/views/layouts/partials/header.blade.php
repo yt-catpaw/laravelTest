@@ -21,4 +21,10 @@
             </li>
         </ul>
     </div>
+    <div>
+        {{-- Auth::user()->name --}}
+    </div>
+    <a href="{{ route('cart.showProducts') }}">
+        <img alt="ショッピングカート" src="{{ asset('/assets/img/cart.png') }}" style="height: 30px;">
+    </a>
 </nav>
