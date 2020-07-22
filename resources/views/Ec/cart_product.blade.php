@@ -2,7 +2,7 @@
 @section('title', 'Tutrial for beginner')
 
 @section('content')
-    @if(isset($products[0]) )
+    @if( 0 < count($products) )
         <div class="col-md-9">
             <div class="page-header">
                 <h1 style="text-align:center;"><small>商品一覧</small></h1>

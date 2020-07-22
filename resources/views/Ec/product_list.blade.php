@@ -8,7 +8,7 @@
         </div>
         <button type="submit" class="btn btn-info">検索</button>
     </form>
-    @if (isset($products))
+    @if (0 < count($products))
         <div class="col-md-9">
             <div class="page-header">
                 <h1 style="text-align:center;"><small>商品一覧</small></h1>

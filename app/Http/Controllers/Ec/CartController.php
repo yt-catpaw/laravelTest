@@ -16,9 +16,9 @@ class CartController extends Controller
 
     public function putCartProduct( Request $request, $productId) {
 
-        $productsId = $request->session()->get('productId');
+        $productIds = $request->session()->get('productId');
 
-        if ( is_null( $productsId) || !in_array($productId, $productsId) ) {
+        if ( is_null($productIds) || !in_array($productId, $productIds) ) {
             $request->session()->push('productId', $productId);
         }
 
@@ -27,11 +27,11 @@ class CartController extends Controller
 
     public function showCartProducts( Request $request ) {
 
-        $productiIds = $request->session()->get('productId');
+        $productIds = $request->session()->get('productId');
 
         $products = [];
-        if ( isset( $productiIds) && 0 < count($productiIds)) {
-            foreach ( $productiIds as $productId) {
+        if ( isset( $productIds) && 0 < count( $productIds)) {
+            foreach ( $productIds as $productId) {
                 $product = $this->cartService->findById($productId);
                 array_push($products, $product);
             }
