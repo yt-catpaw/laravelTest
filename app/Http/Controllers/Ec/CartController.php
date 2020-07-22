@@ -27,11 +27,11 @@ class CartController extends Controller
 
     public function showCartProducts( Request $request ) {
 
-        $productsId = $request->session()->get('productId');
+        $productiIds = $request->session()->get('productId');
 
-        $products = array();
-        if ( isset( $productsId) && 0 < count($productsId)) {
-            foreach ( $productsId as $productId) {
+        $products = [];
+        if ( isset( $productiIds) && 0 < count($productiIds)) {
+            foreach ( $productiIds as $productId) {
                 $product = $this->cartService->findById($productId);
                 array_push($products, $product);
             }
