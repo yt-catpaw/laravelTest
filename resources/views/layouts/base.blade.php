@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
-    <style type="text/css">
-    </style>
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
 @include('layouts.partials.header')
 
 <div class="container">
-   　@yield('content')
+    @yield('content')
 </div>
 
 @include('layouts.partials.footer')

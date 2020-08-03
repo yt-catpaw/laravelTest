@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">
-        <img alt="Laravel学習帳" src="{{ asset('/assets/img/laravel.png') }}" style="height: 20px;">
+        LaravelShop
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,4 +21,13 @@
             </li>
         </ul>
     </div>
+<<<<<<< Updated upstream
+=======
+    <div>
+        {{-- Auth::user()->name --}}
+    </div>
+    <a chref="{{ route('cart.showProducts') }}">
+        <img alt="ショッピングカート" src="{{ asset('/assets/img/cart.png') }}" style="height: 30px;">
+    </a>
+>>>>>>> Stashed changes
 </nav>

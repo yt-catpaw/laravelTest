@@ -25,7 +25,16 @@ Route::get('/', function () {
 Route::get('/user', 'Admin\AdminUserController@index')->name('user.list');
 Route::get('/product', 'Ec\ProductController@index')->name('product.list');
 Route::get('/product/search', 'Ec\ProductController@productSearch')->name('product.search');
+<<<<<<< Updated upstream
 
+=======
+Route::get('/cart', 'Ec\CartController@showCartProducts')->name('cart.showProducts');
+Route::post('/cart/{product_id}}', 'Ec\CartController@putCartProduct')->name('cart.putProduct');
+Route::get('/cart/delete', 'Ec\CartController@deleteCartProduct')->name('cart.deleteProduct');
+Route::get('/sample', function () {
+    return view('sample');
+});
+>>>>>>> Stashed changes
 
 Auth::routes();
 
