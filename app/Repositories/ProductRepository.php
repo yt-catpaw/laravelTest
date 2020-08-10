@@ -16,6 +16,15 @@ class ProductRepository {
         return $products;
     }
 
+    public function findById($productId) {
+
+        $product = Product::where('active_flg', '=', config('global.active'))
+                          ->where('id', '=', $productId)
+                          ->first();
+
+        return $product;
+    }
+
     public function findByName($keyword) {
 
         $products = Product::where('active_flg', '=', config('global.active'))
