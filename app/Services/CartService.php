@@ -13,8 +13,10 @@ class CartService {
     }
 
     public function findById($productId) {
+
         $product = $this->productRepository->findById($productId);
 
         return $product;
     }
+
 }

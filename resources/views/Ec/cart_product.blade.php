@@ -5,7 +5,8 @@
     @if( 0 < count($products) )
         <div class="col-md-9">
             <div class="page-header">
-                <h1 style="text-align:center;"><small>商品一覧</small></h1>
+                <h1><small>カート商品一覧</small></h1>
+                <hr>
             </div>
 
             <div class="row">

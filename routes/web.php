@@ -29,6 +29,12 @@ Route::get('/cart', 'Ec\CartController@showCartProducts')->name('cart.showProduc
 Route::post('/cart/{product_id}}', 'Ec\CartController@putCartProduct')->name('cart.putProduct');
 Route::get('/cart/delete', 'Ec\CartController@deleteCartProduct')->name('cart.deleteProduct');
 
+Route::get('/cart', 'Ec\CartController@showCartProducts')->name('cart.showProducts');
+Route::post('/cart/{product_id}}', 'Ec\CartController@putCartProduct')->name('cart.putProduct');
+Route::get('/cart/delete', 'Ec\CartController@deleteCartProduct')->name('cart.deleteProduct');
+Route::get('/sample', function () {
+    return view('sample');
+});
 
 Auth::routes();
 
