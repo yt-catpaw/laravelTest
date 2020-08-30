@@ -13,13 +13,17 @@ class CartController extends Controller
 
     public function putCartProduct( Request $request, $productId) {
 
+        \Log::info($productId);
+       
         $productIds = $request->session()->get('productId');
+        \Log::info($productIds);
 
         if ( is_null($productIds) || !in_array($productId, $productIds) ) {
             $request->session()->push('productId', $productId);
         }
 
-        //ここで返却値を返す。code 200？エラーメッセージ？
+        //返却値はどうする？
+        return true;
     }
 
     public function deleteCartProduct(Request $request) {

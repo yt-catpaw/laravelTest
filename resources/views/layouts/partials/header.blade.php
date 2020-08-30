@@ -21,13 +21,8 @@
             </li>
         </ul>
     </div>
-<<<<<<< Updated upstream
-=======
-    <div>
-        {{-- Auth::user()->name --}}
-    </div>
-    <a chref="{{ route('cart.showProducts') }}">
+
+    <a href="{{ route('cart.showProducts') }}">
         <img alt="ショッピングカート" src="{{ asset('/assets/img/cart.png') }}" style="height: 30px;">
     </a>
->>>>>>> Stashed changes
 </nav>
